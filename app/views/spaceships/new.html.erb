@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h1>New spaceship</h1>
+    <%= simple_form_for(@spaceship) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :country %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+      <%= f.input :year_of_creation %>
+      <%= f.submit "Add spaceship", class: "btn btn-primary"%>
+    <% end %>
+</div>
+

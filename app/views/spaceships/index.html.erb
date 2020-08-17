@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>All our spaceships available</h1>
+
+  <% @spaceships.each do|spaceship| %>
+<div class="card-product">
+  <img src="#" />
+  <div class="card-product-infos">
+    <h3 class="text-center"><%= spaceship.name %></h3>
+     <ul class="list-group text-center" =>
+      <li class="list-group-item list-group-item-dark"><%= spaceship.country %></li>
+      <li class="list-group-item list-group-item-dark"><%= spaceship.price %> <strong>$</strong></li>
+      <li class="list-group-item list-group-item-dark"><%= spaceship.description %> </li>
+      <li class="list-group-item list-group-item-dark"><%= spaceship.year_of_creation %> <strong>years</strong></li>
+      <% end %>
+  </ul>
+  </div>
+</div>
+
+
+</div>
+
+
+
