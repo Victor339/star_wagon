@@ -4,8 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true
-  validates :age, presence: true, inclusion: { in: 18..150 }
-  belongs_to :spaceship
+  has_many :spaceships
   has_many :bookings
 end
