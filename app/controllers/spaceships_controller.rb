@@ -10,7 +10,7 @@ class SpaceshipsController < ApplicationController
     authorize @spaceship
   end
 
-   def edit
+  def edit
     authorize @spaceship
   end
 

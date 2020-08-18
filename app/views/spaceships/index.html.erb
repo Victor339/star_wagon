@@ -5,7 +5,7 @@
 
   <tbody>
     <% @spaceships.each do|spaceship| %>
-      <img id="circle-img" tabindex="1" style="z-index:100; position: absolute;" src="https://images.unsplash.com/photo-1481819613568-3701cbc70156?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"/>
+      <img id="circle-img" style="z-index:100;" src="https://images.unsplash.com/photo-1481819613568-3701cbc70156?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"/>
 
       <div class="card-trip" id="content">
         <div class="card-trip-infos">
@@ -18,18 +18,16 @@
             </tr>
         </div>
       </div>
-      <% if policy(Spaceship).create? %>
+      <% if user_signed_in? && policy(Spaceship).create? %>
          <td><%= link_to "New Spaceship", new_spaceship_path %></td>
        <% end %>
-      <% if policy(spaceship).edit? %>
+      <% if user_signed_in? && policy(spaceship).edit? %>
           <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
        <% end %>
-       <% if policy(spaceship).destroy? %>
+       <% if user_signed_in? && policy(spaceship).destroy? %>
           <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
        <% end %>
    <% end %>
   </tbody>
   </div>
 </div>
-
-
