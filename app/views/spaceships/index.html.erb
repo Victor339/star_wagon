@@ -1,7 +1,41 @@
+
+<h1>All our spaceships available</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>SpaceShip</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spaceships.each do |spaceship| %>
+      <tr>
+        <td><%= spaceship.name %></td>
+        <td><%= spaceship.user.name %></td>
+        <td><%= link_to 'Show', spaceship %></td>
+        <% if policy(spaceship).edit? %>
+          <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
+        <% end %>
+        <% if policy(spaceship).destroy? %>
+          <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
 <div class="container">
   <h1>All our spaceships available</h1>
 
   <% @spaceships.each do|spaceship| %>
+
+
+
 <div class="card-product">
   <img src="#" />
   <div class="card-product-infos">
@@ -10,12 +44,14 @@
       <li class="list-group-item list-group-item-dark"><%= spaceship.country %></li>
       <li class="list-group-item list-group-item-dark"><%= spaceship.price %> <strong>$</strong></li>
       <li class="list-group-item list-group-item-dark"><%= spaceship.description %> </li>
-      <li class="list-group-item list-group-item-dark"><%= spaceship.year_of_creation %> <strong>years</strong></li>
+      <li class="list-group-item list-group-item-dark"><strong>since</strong><%= spaceship.year_of_creation %></li>
       <% end %>
-  </ul>
+     </ul>
   </div>
+   <% if policy(Spaceship).create? %>
+      <%= link_to "New Spaceship", new_spaceship_path %>
+  <% end %>
 </div>
-
 </div>
 
 
