@@ -26,6 +26,21 @@ class BookingsController < ApplicationController
     end
 
 
+    def update 
+        set_booking
+        redirect_to booking_path(@booking)
+    end
+
+    def edit
+      set_booking
+    end
+
+    def destroy
+      set_booking
+      @booking.destroy
+      redirect_to spaceships_path
+    end
+  
     private
 
     def booking_params
