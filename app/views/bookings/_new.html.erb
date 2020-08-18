@@ -1,0 +1,11 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-6">
+      <%= simple_form_for [@spaceship, @booking] do |f| %>
+        <div class="pick-departure_date"><%= f.input :departure_date %>
+        <div class="pick-arrival_date"><%= f.input :arrival_date %>
+        <%= f.submit "Book your Spaceship", class: "btn btn-primary" %>
+      <% end %>|
+      </div>
+      </div>
+    </div>
+  </div>

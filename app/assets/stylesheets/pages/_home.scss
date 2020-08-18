@@ -114,7 +114,7 @@
 
 
 .stars .stars-middle {
-  background-image: 
+  background-image:
     radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
@@ -151,7 +151,7 @@
 
 .container {
   margin: auto;
-  
+
   .search {
     opacity: 0.65;
     position: absolute;
@@ -201,6 +201,7 @@
       transition: all .5s;
     }
   }
+  
 .input-red-search-bar {
     font-family: 'Inconsolata', monospace;
     position: absolute;

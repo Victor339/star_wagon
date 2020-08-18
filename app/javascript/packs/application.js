@@ -28,10 +28,15 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+
+import { calculateBookingPrice } from '../components/calculate_booking_price'
+
 import { toggleShowCard } from '../components/toggle_show_card';
+
 
 document.addEventListener('turbolinks:load', () => {
   toggleShowCard();
   // Call your functions here, e.g:
   // initSelect2();
+  calculateBookingPrice();
 });
