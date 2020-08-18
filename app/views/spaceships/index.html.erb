@@ -1,58 +1,36 @@
+<div id="back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1543722530-d2c3201371e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80);">
 
-<h1>All our spaceships available</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>SpaceShip</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="container">
+    <h1>All our spaceships available</h1>
 
   <tbody>
-    <% @spaceships.each do |spaceship| %>
-      <tr>
-        <td><%= spaceship.name %></td>
-        <td><%= spaceship.user.name %></td>
-        <td><%= link_to 'Show', spaceship %></td>
-        <% if policy(spaceship).edit? %>
-          <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
-        <% end %>
-        <% if policy(spaceship).destroy? %>
-          <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <% @spaceships.each do|spaceship| %>
+      <img class="circle" style="z-index:100; position: absolute;" src="https://images.unsplash.com/photo-1481819613568-3701cbc70156?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"/>
 
-
-
-<div class="container">
-  <h1>All our spaceships available</h1>
-
-  <% @spaceships.each do|spaceship| %>
-
-
-
-<div class="card-product">
-  <img src="#" />
-  <div class="card-product-infos">
-    <h3 class="text-center"><%= spaceship.name %></h3>
-     <ul class="list-group text-center" =>
-      <li class="list-group-item list-group-item-dark"><%= spaceship.country %></li>
-      <li class="list-group-item list-group-item-dark"><%= spaceship.price %> <strong>$</strong></li>
-      <li class="list-group-item list-group-item-dark"><%= spaceship.description %> </li>
-      <li class="list-group-item list-group-item-dark"><strong>since</strong><%= spaceship.year_of_creation %></li>
+      <div class="card-trip">
+        <div class="card-trip-infos">
+           <tr>
+            <h3 class="text-center"><%= link_to spaceship.name, spaceship_path(spaceship) %></h3>
+            <td><%= spaceship.country %></td>
+            <td><%= spaceship.description %> </li>
+            <td class="list-group-item list-group-item-dark"><%= spaceship.year_of_creation %></td>
+            <li class="list-group-item list-group-item-dark"><%= spaceship.price %> <strong>$</strong></li>
+            </tr>
+      </div>
+    </div>
+   <% end %>
+     <% if policy(Spaceship).create? %>
+        <td><%= link_to "New Spaceship", new_spaceship_path %></td>
       <% end %>
-     </ul>
+     <% if policy(spaceship).edit? %>
+         <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
+      <% end %>
+      <% if policy(spaceship).destroy? %>
+         <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+  
+  </tbody>
   </div>
-   <% if policy(Spaceship).create? %>
-      <%= link_to "New Spaceship", new_spaceship_path %>
-  <% end %>
 </div>
-</div>
-
 
 
