@@ -16,19 +16,18 @@
             <td class="list-group-item list-group-item-dark"><%= spaceship.year_of_creation %></td>
             <li class="list-group-item list-group-item-dark"><%= spaceship.price %> <strong>$</strong></li>
             </tr>
+        </div>
       </div>
-    </div>
+      <% if policy(Spaceship).create? %>
+         <td><%= link_to "New Spaceship", new_spaceship_path %></td>
+       <% end %>
+      <% if policy(spaceship).edit? %>
+          <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
+       <% end %>
+       <% if policy(spaceship).destroy? %>
+          <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <% end %>
    <% end %>
-     <% if policy(Spaceship).create? %>
-        <td><%= link_to "New Spaceship", new_spaceship_path %></td>
-      <% end %>
-     <% if policy(spaceship).edit? %>
-         <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
-      <% end %>
-      <% if policy(spaceship).destroy? %>
-         <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-  
   </tbody>
   </div>
 </div>

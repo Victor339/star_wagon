@@ -24,6 +24,6 @@ class SpaceshipPolicy < ApplicationPolicy
   private
 
   def user_is_owner_or_admin?
-    @spaceship".user == @user || @user.admin
+    @spaceship.user == @user || @user.admin
   end
 end
