@@ -11,7 +11,7 @@ class SpaceshipsController < ApplicationController
     @booking = Booking.new
   end
 
-   def edit
+  def edit
     authorize @spaceship
   end
 
