@@ -1,8 +1,37 @@
-<p>Name: <%= @spaceship.name %></p>
-<p>Year of creation: <%= @spaceship.year_of_creation %></p>
-<p>Country: <%= @spaceship.country%></p>
-<p>Price: <%= @spaceship.price%></p>
-<p>Description: <%= @spaceship.description%></p>
 
 <%= render "bookings/new" %>
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.ytimg.com/vi/0yyK--vO6do/maxresdefault.jpg);">
+  <h1> Your trip to Mars with Soyouz <% @spaceship.name %></h1>
+<main class="page-content">
+
+
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Awesome place</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">Know more about</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Meet locals</h2>
+      <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+      <button class="btn">Know more about</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Spend time alone</h2>
+      <p class="copy">It's the desert you've always dreamed of</p>
+      <button class="btn">Know more about</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Explore The Galaxy</h2>
+      <p class="copy">Seriously, straight up, just blast off into outer space today</p>
+      <button class="btn">Know more about</button>
+    </div>
+  </div>
+</main>
