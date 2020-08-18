@@ -1,34 +1,38 @@
 
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://830676.smushcdn.com/1681605/wp-content/uploads/2020/02/jeremy-thomas-E0AHdsENmDg-unsplash-1080x737.jpg?lossy=1&strip=1&webp=1);">
 
-	
-  <div class="container">
-    <% if user_signed_in? %>
-      <p class="text-center">Hello <%= current_user.name %></p>
-      <% end  %>
-    <h1 class="demo"> Star Wagon <strong>takes you to space</strong><strong> </strong>!</h1>
-  
-</div>
-</div>
-
-
-
-<section class="space">
-  <div class="stars">
-    <div class="stars-middle"></div>
+    <div class="container">
+      <% if user_signed_in? %>
+        <p class="text-center">Hello <%= current_user.name %></p>
+        <% end  %>
+      <h1 class="demo"> Star Wagon <strong>takes you to space</strong><strong> </strong>!</h1>
+    
+      <form action="" class="search-bar">
+        <input type="search" name="search" pattern=".*\S.*" required>
+          <button class="search-btn" type="submit">
+            <span>Search</span>
+          </button>
+      </form>
+    </div>
   </div>
-</section>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+  <section class="space">
+    <div class="stars">
+      <div class="stars-middle"></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Space Wagon is a company created in 2020 at Le Wagon
+    </div>
   </div>
-  <div class="footer-copyright">
-    Space Wagon is a company created in 2020 at Le Wagon
-  </div>
-</div>
 
