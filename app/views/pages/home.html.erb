@@ -1,52 +1,23 @@
-<<<<<<< HEAD
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://830676.smushcdn.com/1681605/wp-content/uploads/2020/02/jeremy-thomas-E0AHdsENmDg-unsplash-1080x737.jpg?lossy=1&strip=1&webp=1);">
 
-	<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
- 
-  <% end %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://830676.smushcdn.com/1681605/wp-content/uploads/2020/02/jeremy-thomas-E0AHdsENmDg-unsplash-1080x737.jpg?lossy=1&strip=1&webp=1);">
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", "#", class: "nav-link", style: 'color: #FFFFFF' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Messages", "#", class: "nav-link", style: 'color: #FFFFFF'%>
-      </li>
-      <% if user_signed_in? %>
-        <p>Hello <%= current_user.name %></p>
-      <% end  %>
-      <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
+	
   <div class="container">
-    <h1> Star Wagon <strong>takes you to space</strong><strong> </strong>!</h1>
-    <p></p>
-
-<div class="wrap">
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div>
+    <% if user_signed_in? %>
+      <p class="text-center">Hello <%= current_user.name %></p>
+      <% end  %>
+    <h1 class="demo"> Star Wagon <strong>takes you to space</strong><strong> </strong>!</h1>
+  
+</div>
 </div>
 
-</div>
-</div>
+
+
+<section class="space">
+  <div class="stars">
+    <div class="stars-middle"></div>
+  </div>
+</section>
 
 <div class="footer">
   <div class="footer-links">

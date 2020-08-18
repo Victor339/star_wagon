@@ -1,4 +1,6 @@
 // Specific CSS for your home-page
+@import url(//db.onlinewebfonts.com/c/a21764905c623777a48ec557b4229c22?family=Anurati);
+
 .container {
 	padding-top: 200px;
 	padding-bottom: 200px;
@@ -49,9 +51,7 @@
   background-color: transparent;
 }
 
-.nav-link {
-	font-color: white;
-}
+
 
 .btn-flat {
   color: white;
@@ -89,10 +89,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
-}
+
 
 .search {
   width: 100%;
@@ -136,4 +133,49 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+
+.demo {
+    font-family:"Anurati-Regular" !important;
+    font-size:16px;
+    font-style: normal;
+}
+
+
+
+
+.stars > div {
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+.stars .stars-middle {
+  background-image: 
+    radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: stars 3.5s infinite linear;
+}
+
+
+//ANIMATION
+
+
+@keyframes stars {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
 }
