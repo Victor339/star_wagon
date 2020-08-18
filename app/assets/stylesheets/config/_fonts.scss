@@ -7,11 +7,13 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
  @font-face {
-   font-family: "Anurati-Regular";
-   src: font-url('Anurati-Regular.eot');
-   src: font-url('Anurati-Regular.eot?#iefix') format('embedded-opentype'),
-        font-url('Anurati-Regular.woff') format('woff'),
-        font-url('Anurati-Regular.ttf') format('truetype')
- }
- $my-font: "Anurati-Regular";
- $my-font: "Anurati-Regular";
+   font-family: "Ailerons-Regular";
+   src: url('/assets/pages/fonts/Ailerons-Regular')
+}
+
+ @font-face {
+   font-family: "Ailerons-Regular";
+   src: url('/assets/pages/fonts/Ailerons-Regular')
+}
+ //$my-font: "Ailerons-Regular";
+ //$my-font: "Ailerons-Regular";
