@@ -1,1 +1,11 @@
-<h1>Test</h1>
+<p>Name: <%= @spaceship.name %></p>
+<p>Year of creation: <%= @spaceship.year_of_creation %></p>
+<p>Country: <%= @spaceship.country%></p>
+<p>Price: <%= @spaceship.price%></p>
+<p>Description: <%= @spaceship.description%></p>
+
+<% if policy(@spaceship).edit? %>
+  <%= link_to 'Update', Update_spaceship_path(@spaceship), class: "btn btn-primary"%>
+<% end %>
+<%= link_to 'Back', spaceships_path, class: "btn btn-primary"%>
+
