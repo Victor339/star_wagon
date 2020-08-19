@@ -2,8 +2,8 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: white;
 }
-
 
 .card-trip {
   height: 230px;
@@ -17,7 +17,7 @@
   border-radius: 15px;
 }
 
-#circle-img {
+.circle-img {
   object-fit: cover;
   width: 200px;
   height: 200px;
@@ -38,11 +38,13 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color: white;
 }
 
 .card-trip .card-trip-infos {
   padding: 0px;
   margin-bottom: 80px;
+  color: white;
 }
 
 #content {
