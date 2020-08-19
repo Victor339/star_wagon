@@ -35,9 +35,16 @@ import { calculateBookingPrice } from '../components/calculate_booking_price'
 import { toggleShowCard } from '../components/toggle_show_card';
 
 
+import { datepicker } from '../plugins/flatpickr';
+
+
 document.addEventListener('turbolinks:load', () => {
   toggleShowCard();
   // Call your functions here, e.g:
-  // initSelect2();
-  calculateBookingPrice();
+  // initSelect2(;
+  if (document.querySelector('#booking_arrival_date')){
+    calculateBookingPrice();
+    datepicker();
+  }
+
 });
