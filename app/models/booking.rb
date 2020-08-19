@@ -6,3 +6,5 @@ class Booking < ApplicationRecord
   validates :destination, inclusion: { in: DESTINATIONS }
   validates :departure_date, :arrival_date, presence: true
 end
+
+
