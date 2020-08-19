@@ -5,24 +5,29 @@
   <h1>All our spaceships available</h1>
      <!-- <div class="navbar-lewagon"><%= link_to "Home", root_path %> </div> -->
   <tbody>
-    <% @spaceships.each do|spaceship| %>
-      <img id="circle-img" style="z-index:100;" src="https://www.nasaspaceflight.com/wp-content/uploads/2017/09/Z3GGG.jpg"/>
+          <img class="circle-img" style="z-index:100;" src="https://www.nasaspaceflight.com/wp-content/uploads/2017/09/Z3GGG.jpg"/>
 
-      <div class="card-trip" id="content">
+    <% @spaceships.each do|spaceship| %>
+
+<!--           <img id="circle-img" style="z-index:100;" src="https://www.nasaspaceflight.com/wp-content/uploads/2017/09/Z3GGG.jpg"/>
+ -->
+      <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.fromspacewithlove.com/wp-content/uploads/2018/08/planet-mars-img.png);">
         <div class="card-trip-infos">
            <tr>
             <h3 class="text-center"><%= link_to spaceship.name, spaceship_path(spaceship) %></h3>
-            <td><%= spaceship.country %></td>
-            <td><%= spaceship.description %> </li>
-            <td class="list-group-item list-group-item-dark"><%= spaceship.year_of_creation %></td>
-            <li class="list-group-item list-group-item-dark" id ="price-per-day"><%= spaceship.price %> <strong>$</strong></li>
+            <h2 class="text-center"> Envolez-vous vers Mars </p>
+            <tr><%= "Pays de départ: #{spaceship.country}"  %></tr>
+            <li class="list-group-item list-group-item-dark text-right" id ="price-per-day"><%= spaceship.price %> <strong>$</strong></li>
             </tr>
         </div>
       </div>
 
-      <% if user_signed_in? && policy(Spaceship).create? %>
+      <img class="circle-img" style="z-index:100;" src="https://www.universetoday.com/wp-content/uploads/2019/08/Starship-Super-Heavy-steel-render-2019-SpaceX-2X-1-crop-2000x938.jpg"/>
+
+      <img class="circle-img" style="z-index:100;" src="https://images.laprovence.com/media/afp/2019-07/2019-07-17/1063873287aed43c95d4387a69640c68c6763aaf.jpg?twic=v1/dpr=2/focus=0x0/cover=740x416"/>
+    <!--   <% if user_signed_in? && policy(Spaceship).create? %>
          <td><%= link_to "New Spaceship", new_spaceship_path %></td>
-       <% end %>
+       <% end %> -->
       <% if user_signed_in? && policy(spaceship).edit? %>
           <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
        <% end %>
