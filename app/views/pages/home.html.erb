@@ -4,14 +4,14 @@
 
 
     <div class="container">
-        <% if user_signed_in? %>
-          <p class="text-center">Hello <%= current_user.name %></p>
-          <% end  %>
-        <h1 class="demo"> Star Wagon <strong>takes you to space</strong><strong> </strong>!</h1>
 
-          <input class="input-red-search-bar" type="text" placeholder="Search...">
-          <span> <%= link_to "All our spaceships", spaceships_path(@spaceships), class: "btn btn-flat", style: "text-align:center;" %></span>
-          <div class="search" id="search-bar-key"></div>
+
+      <% if user_signed_in? %>
+        <p class="text-center">Hello <%= current_user.name %></p>
+        <% end  %>
+      <h1 class="demo"> Star Wagon <strong>takes you to space</strong><strong> </strong>!</h1>
+        <input class="input-red-search-bar" type="text" placeholder="Search...">
+        <div class="search" id="search-bar-key"></div>
       </div>
     </div>
 
@@ -21,21 +21,22 @@
 
 
   <div class="footer">
-          <div class="footer-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-            <div class="footer-copyright">
-              Space Wagon is a company created in 2020 at Le Wagon
-            </div>
-          </div>
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+        Space Wagon is a company created in 2020 at Le Wagon
+    </div>
+  </div>
 
   <section class="space">
     <div class="stars">
       <div class="stars-middle"></div>
     </div>
   </section>
+
 
