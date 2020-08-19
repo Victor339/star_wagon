@@ -11,10 +11,11 @@
 
 <!--           <img id="circle-img" style="z-index:100;" src="https://www.nasaspaceflight.com/wp-content/uploads/2017/09/Z3GGG.jpg"/>
  -->
-      <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.fromspacewithlove.com/wp-content/uploads/2018/08/planet-mars-img.png);">
+      <div class="card-trip" id="content" style="background-image: url(https://1.bp.blogspot.com/-ou7Je3OVg6U/WYtxDqjNp_I/AAAAAAAACSQ/fsopS5VtFg4bmlv8hQNfiRYfJqTygCotQCLcBGAs/s2048/Martian%2Blandscape%2Bby%2BAmante%2BLombardi.jpg);">
         <div class="card-trip-infos">
            <tr>
-            <h3 class="text-center"><%= link_to spaceship.name, spaceship_path(spaceship) %></h3>
+
+            <h3 class="text-center"><%= link_to spaceship.name, spaceship_path(spaceship), style:'color:#FFFFFF;' %></h3>
             <h2 class="text-center"> Envolez-vous vers Mars </p>
             <tr><%= "Pays de départ: #{spaceship.country}"  %></tr>
             <li class="list-group-item list-group-item-dark text-right" id ="price-per-day"><%= spaceship.price %> <strong>$</strong></li>
