@@ -4,25 +4,21 @@
   margin: 0;
 }
 
-.card-trip h3 {
-  margin-left: -65px;
-}
-
 
 .card-trip {
-  position:relative;
   height: 230px;
   background: white;
   box-shadow: 0 0 15px rgba(255,255,255,0.7);
-  display:flex;
-  align-items: center;
+  // display:flex;
+  // justify-content: center;
+  // align-items: center;
   margin-left: -5%;
-  margin-top: 180px;
   margin-right: 55%;
   border-radius: 15px;
 }
 
 #circle-img {
+  object-fit: cover;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -30,6 +26,10 @@
   border:3px solid white;
   margin-top: 4%;
   margin-left: 10%;
+  background: linear-gradient(rgba(100,100,100,0.3), rgba(100,100,100,0.3));
+  // display:flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .card-trip tr {
@@ -41,8 +41,8 @@
 }
 
 .card-trip .card-trip-infos {
-  padding: 16px;
-  margin-bottom: 95px;
+  padding: 0px;
+  margin-bottom: 80px;
 }
 
 #content {
@@ -50,5 +50,8 @@
 }
 
 #content.show {
-  display:block;
+  display:flex;
+  // justify-content: space-between;
+  align-items: flex-end;
+  position:relative
 }

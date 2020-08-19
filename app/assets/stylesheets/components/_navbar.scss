@@ -10,3 +10,22 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: transparent;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:56px;
+  z-index:1;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 100px;
+  // background-color: transparent;
+}
