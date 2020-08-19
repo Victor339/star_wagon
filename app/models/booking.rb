@@ -3,7 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :spaceship
 
-  validates :destination, inclusion: { in: DESTINATIONS }
+  #validates :destination, inclusion: { in: DESTINATIONS }
   validates :departure_date, :arrival_date, presence: true
 end
 

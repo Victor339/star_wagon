@@ -1,9 +1,9 @@
 const calculateBookingPrice = () => {
-  const departure = document.querySelector('#search_departure_date')
+  const departure = document.querySelector('#booking_departure_date')
 
  // const departure = document.querySelector('#search_departure_date')
   // console.log(departure)
-  const arrival = document.querySelector('#search_arrival_date')
+  const arrival = document.querySelector('#booking_arrival_date')
 
 
   arrival.addEventListener('change', (event) => {

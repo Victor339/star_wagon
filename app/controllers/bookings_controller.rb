@@ -1,19 +1,20 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :update, :edit, :destroy]
-  skip_after_action :verify_authorized, only: [:create]
 
   def show
     authorize @booking
     set_booking
     @spaceship = @booking.spaceship
     @total_price = @booking.total_price
-  end 
+  end
 
   def create
   	@spaceship = Spaceship.find(params[:spaceship_id])
   	@booking = Booking.new(booking_params)
+    authorize @booking
   	@booking.spaceship = @spaceship
   	@booking.user = current_user
+
 
      #if @booking.departure_date && @booking.arrival_date
       	#@booking.total_price = @booking.spaceship.price.to_f
@@ -22,9 +23,9 @@ class BookingsController < ApplicationController
        #end
 
     if @booking.save
-       redirect_to spaceship_path(@spaceship)
+       redirect_to booking_path(@booking)
     else
-      	redirect_to spaceships_path
+      	render "spaceships/show"
     	end
   end
 
