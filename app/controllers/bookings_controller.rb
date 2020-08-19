@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:update, :edit, :destroy]
   skip_after_action :verify_authorized, only: [:create]
 
+
 def create
 	@spaceship = Spaceship.find(params[:spaceship_id])
 	@booking = Booking.new(booking_params)

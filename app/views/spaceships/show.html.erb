@@ -3,7 +3,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.ytimg.com/vi/0yyK--vO6do/maxresdefault.jpg);">
   <h1> Your trip to Mars with Soyouz <% @spaceship.name %></h1>
 <main class="page-content">
-  
+
 
   <div class="card" style="background-image:, url(https://images.lindependant.fr/api/v1/images/view/5ecf4b1d3e4546642f180146/large/image.jpg?v=1);">
     <div class="content">
@@ -33,9 +33,6 @@
       <!--button class="btn">Know more about</button-->
     </div>
   </div>
-  	<button class="btn-launch"
-	        type="button">
-	    Launch my trip 
-	</button>
 </main>
 </div>
+<%= render "shared/newbooking", spaceship: @spaceship, booking: @booking %>
