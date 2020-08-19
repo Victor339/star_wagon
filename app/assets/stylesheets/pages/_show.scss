@@ -84,7 +84,7 @@ body {
     height: 110%;
     background-size: cover;
     background-position: 0 0;
-    transition: transform calc(var(--d) * 1.5) var(--e);
+    //transition: transform calc(var(--d) * 1.5) var(--e);
     pointer-events: none;
   }
   
@@ -116,8 +116,8 @@ body {
       hsla(0, 0%, 0%, 0.762) 94.1%,
       hsla(0, 0%, 0%, 0.790) 100%
     );
-    transform: translateY(-50%);
-    transition: transform calc(var(--d) * 2) var(--e);
+    //transform: translateY(-50%);
+    //transition: transform calc(var(--d) * 2) var(--e);
   }
   
   @each $id in $imageIds {
@@ -136,7 +136,7 @@ body {
   align-items: center;
   width: 100%;
   padding: 1rem;
-  transition: transform var(--d) var(--e);
+  //transition: transform var(--d) var(--e);
   z-index: 1;
   
   > * + * {
