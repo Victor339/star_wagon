@@ -2,7 +2,10 @@
 
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://830676.smushcdn.com/1681605/wp-content/uploads/2020/02/jeremy-thomas-E0AHdsENmDg-unsplash-1080x737.jpg?lossy=1&strip=1&webp=1);">
 
+
     <div class="container">
+
+
       <% if user_signed_in? %>
         <p class="text-center">Hello <%= current_user.name %></p>
         <% end  %>
@@ -11,6 +14,11 @@
         <div class="search" id="search-bar-key"></div>
       </div>
     </div>
+
+ <div class="col text-center">
+
+  </div>
+
 
   <div class="footer">
     <div class="footer-links">
