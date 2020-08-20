@@ -1,39 +1,37 @@
 <div id="back">
 <!--   style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1543722530-d2c3201371e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80);"
  -->
- <div class="container">
+  <div class="container">
+  <h1><%= "All our spaceships available" %></h1>
 
-  <h1>All our spaceships available</h1>
-    <tbody>
-
+  <tbody>
     <% @spaceships.each do|spaceship| %>
       <% if spaceship.photo.attached? %>
-      <%= cl_image_tag spaceship.photo.key, height: 300, width: 400, crop: :fill, class:'circle-img', style:'z-index:100;' %>
+      <%= cl_image_tag spaceship.photo.key, height: 200, width: 200, crop: :fill, class:'circle-img', style:'z-index:100;' %>
       <% else %>
       <img class="circle-img" style="z-index:100;" src="https://images.laprovence.com/media/afp/2019-07/2019-07-17/1063873287aed43c95d4387a69640c68c6763aaf.jpg?twic=v1/dpr=2/focus=0x0/cover=740x416"/>
       <% end %>
-        <div class="card-trip" id="content" style="background-image: url(https://1.bp.blogspot.com/-ou7Je3OVg6U/WYtxDqjNp_I/AAAAAAAACSQ/fsopS5VtFg4bmlv8hQNfiRYfJqTygCotQCLcBGAs/s2048/Martian%2Blandscape%2Bby%2BAmante%2BLombardi.jpg);">
+        <div class="card-trip" id="content" style="background-image: url(https://mcdn.wallpapersafari.com/medium/1/38/Pwc2Qz.jpg);">
           <div class="card-trip-infos">
              <tr>
-
               <h3 class="text-center"><%= link_to spaceship.name, spaceship_path(spaceship), style:'color:#FFFFFF; text-decoration:none;' %></h3>
-
-              <tr class="text-center"> <%= spaceship.description %> </tr>
+              <tr class="text-center"> <%= spaceship.destination %> </tr>
               <tr class="text-center"><%= "Pays de départ: #{spaceship.country}"  %></tr>
               <li class="list-group-item list-group-item-dark text-right" id ="price-per-day"><%= spaceship.price %> <strong>$</strong></li>
           </div>
+             <% if user_signed_in? && policy(Spaceship).create? %>
+               <td><%= link_to "New Spaceship", new_spaceship_path %></td>
+             <% end %>
+            <% if user_signed_in? && policy(spaceship).edit? %>
+                <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
+             <% end %>
+             <% if user_signed_in? && policy(spaceship).destroy? %>
+                <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+             <% end %>
         </div>
     <% end %>
-<!--       <img class="circle-img" style="z-index:100;" src="https://images.laprovence.com/media/afp/2019-07/2019-07-17/1063873287aed43c95d4387a69640c68c6763aaf.jpg?twic=v1/dpr=2/focus=0x0/cover=740x416"/>
- --> -->    <!--   <% if user_signed_in? && policy(Spaceship).create? %>
-         <td><%= link_to "New Spaceship", new_spaceship_path %></td>
-       <% end %> -->
-      <% if user_signed_in? && policy(spaceship).edit? %>
-          <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
-       <% end %>
-       <% if user_signed_in? && policy(spaceship).destroy? %>
-          <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       <% end %>
+
+
 
   </tbody>
 
