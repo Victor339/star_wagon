@@ -11,7 +11,7 @@ const calculateBookingPrice = () => {
     const days = (Date.parse(arrival.value)-Date.parse(departure.value))/86400000
     const total = days * price
     const priceHtml = document.querySelector('#price')
-    priceHtml.innerText = total
+    priceHtml.innerText = ` Price estimated ${total} €`
 
 })
 // innerText ?

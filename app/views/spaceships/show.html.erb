@@ -2,38 +2,41 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.ytimg.com/vi/0yyK--vO6do/maxresdefault.jpg);">
   <h1 id="your-trip"> Your trip to Mars with Soyouz <% @spaceship.name %></h1>
-<main class="page-content">
-
-
-  <div class="card" style="background-image:, url(https://images.lindependant.fr/api/v1/images/view/5ecf4b1d3e4546642f180146/large/image.jpg?v=1);">
-    <div class="content">
-      <h2 class="title">Awesome place</h2>
-      <p class="copy"> Never seen before on earth </p>
-      <!--button class="btn">Know more about</button-->
+  <div class="page-content container-trip">
+    <div class="cards">
+      <div class="card" style="background-image:, url(https://images.lindependant.fr/api/v1/images/view/5ecf4b1d3e4546642f180146/large/image.jpg?v=1);">
+        <div class="content">
+          <h2 class="title">Awesome place</h2>
+          <p class="copy"> Never seen before on earth </p>
+          <!--button class="btn">Know more about</button-->
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Meet locals</h2>
+          <p class="copy">Meet and become friends with nice aliens </p>
+          <!--button class="btn">Know more about</button-->
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Spend time alone</h2>
+          <p class="copy">It's the desert you've always dreamed of</p>
+          <!--button class="btn">Know more about</button-->
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Explore The Galaxy</h2>
+          <p class="copy"> Relax and look at the stars </p>
+          <!--button class="btn">Know more about</button-->
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <%= render "shared/form", spaceship: @spaceship, booking: @booking %>
     </div>
   </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Meet locals</h2>
-      <p class="copy">Meet and become friends with nice aliens </p>
-      <!--button class="btn">Know more about</button-->
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Spend time alone</h2>
-      <p class="copy">It's the desert you've always dreamed of</p>
-      <!--button class="btn">Know more about</button-->
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Explore The Galaxy</h2>
-      <p class="copy"> Relax and look at the stars </p>
-      <!--button class="btn">Know more about</button-->
-    </div>
-  </div>
-</main>
-
 </div>
-<%= render "shared/newbooking", spaceship: @spaceship, booking: @booking %>
+
+
