@@ -4,6 +4,12 @@ class SpaceshipsController < ApplicationController
   def index
     #@spaceships = Spaceship.all
     @spaceships = policy_scope(Spaceship).order(created_at: :desc)
+
+    if params[:query].present?
+      @mspaceships = Spaceship.where(destination: params[:query])
+    else
+      @spaceships = Spaceship.all
+    end
   end
 
   def show
@@ -45,9 +51,9 @@ class SpaceshipsController < ApplicationController
 
   private
 
-    def set_spaceship
+  def set_spaceship
       @spaceship = Spaceship.find(params[:id])
-    end
+  end
 
   def spaceship_params
     params.require(:spaceship).permit(:name, :year_of_creation, :country, :price, :description)
