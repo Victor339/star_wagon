@@ -28,12 +28,12 @@
  --> -->    <!--   <% if user_signed_in? && policy(Spaceship).create? %>
          <td><%= link_to "New Spaceship", new_spaceship_path %></td>
        <% end %> -->
-      <% if user_signed_in? && policy(spaceship).edit? %>
+     <!--  <% if user_signed_in? && policy(spaceship).edit? %>
           <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
        <% end %>
        <% if user_signed_in? && policy(spaceship).destroy? %>
           <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       <% end %>
+       <% end %>-->
 
   </tbody>
 
