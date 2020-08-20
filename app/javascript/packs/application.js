@@ -37,11 +37,9 @@ import "../plugins/flatpickr"
 
 
 import { calculateBookingPrice } from '../components/calculate_booking_price'
-
 import { toggleShowCard } from '../components/toggle_show_card';
-
-
 import { datepicker } from '../plugins/flatpickr';
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -53,4 +51,9 @@ document.addEventListener('turbolinks:load', () => {
     datepicker();
   }
 
+  initSweetalert('#sweet-alert-demo', (value) => {
+  console.log(value);
 });
+
+});
+

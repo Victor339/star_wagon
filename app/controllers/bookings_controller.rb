@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
    	   #else
       	#@booking.total_price = 0
        #end
-
+      sleep 8
     if @booking.save
        redirect_to booking_path(@booking)
     else

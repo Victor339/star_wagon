@@ -19,28 +19,8 @@
               <tr class="text-center"><%= "Pays de départ: #{spaceship.country}"  %></tr>
               <li class="list-group-item list-group-item-dark text-right" id ="price-per-day"><%= spaceship.price %> <strong>$</strong></li>
           </div>
-             <% if user_signed_in? && policy(Spaceship).create? %>
-               <td><%= link_to "New Spaceship", new_spaceship_path %></td>
-             <% end %>
-            <% if user_signed_in? && policy(spaceship).edit? %>
-                <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
-             <% end %>
-             <% if user_signed_in? && policy(spaceship).destroy? %>
-                <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-             <% end %>
         </div>
     <% end %>
-
-<!--       <img class="circle-img" style="z-index:100;" src="https://images.laprovence.com/media/afp/2019-07/2019-07-17/1063873287aed43c95d4387a69640c68c6763aaf.jpg?twic=v1/dpr=2/focus=0x0/cover=740x416"/>
- --> -->    <!--   <% if user_signed_in? && policy(Spaceship).create? %>
-         <td><%= link_to "New Spaceship", new_spaceship_path %></td>
-       <% end %> -->
-     <!--  <% if user_signed_in? && policy(spaceship).edit? %>
-          <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
-       <% end %>
-       <% if user_signed_in? && policy(spaceship).destroy? %>
-          <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       <% end %>-->
 
 
   </tbody>

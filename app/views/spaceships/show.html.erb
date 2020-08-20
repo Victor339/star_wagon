@@ -1,7 +1,7 @@
 
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.ytimg.com/vi/0yyK--vO6do/maxresdefault.jpg);">
-  <h1 id="your-trip"> Your trip to Mars with Soyouz <% @spaceship.name %></h1>
+  <h1 id="your-trip"> Your trip to <%= @spaceship.destination %> with <span id= "spaceship-name"><%= @spaceship.name %></span></h1>
   <div class="page-content container-trip">
     <div class="cards">
       <div class="card" style="background-image:, url(https://images.lindependant.fr/api/v1/images/view/5ecf4b1d3e4546642f180146/large/image.jpg?v=1);">
