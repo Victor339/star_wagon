@@ -23,17 +23,6 @@
               <tr class="text-center">Country of departure: <strong><%= spaceship.country %></strong> </tr>
               <p class="text-right align-bottom" id ="price-per-day"><%= number_to_currency(spaceship.price, :unit => "€") %> </p>
           </div>
-            <div style="display: none;">
-             <% if user_signed_in? && policy(Spaceship).create? %>
-               <td><%= link_to "New Spaceship", new_spaceship_path %></td>
-             <% end %>
-             </div>
-            <% if user_signed_in? && policy(spaceship).edit? %>
-                <td><%= link_to 'Update', edit_spaceship_path(spaceship) %></td>
-             <% end %>
-             <% if user_signed_in? && policy(spaceship).destroy? %>
-                <td><%= link_to 'Destroy', spaceship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-             <% end %>
         </div>
        </div>
     <% end %>
