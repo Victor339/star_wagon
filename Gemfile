@@ -38,13 +38,11 @@ gem 'pundit'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.12.0'
 
 
 # Adding popper.js gem file
 
-gem 'popper_js', '~> 1.14.5'
 
 group :development, :test do
   gem 'pry-byebug'
