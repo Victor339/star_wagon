@@ -8,11 +8,21 @@
     <% @spaceships.each do|spaceship| %>
     <div>
       <% if spaceship.photo.attached? %>
-      <%= cl_image_tag spaceship.photo.key, height: 200, width: 200, crop: :fill, class:'circle-img', style:'z-index:100;' %>
+      <%= cl_image_tag spaceship.photo.key, height: 200, width: 200, class:'circle-img', style:'z-index:100; background-position: center;'  %>
       <% else %>
       <img class="circle-img" style="z-index:100;" src="https://images.laprovence.com/media/afp/2019-07/2019-07-17/1063873287aed43c95d4387a69640c68c6763aaf.jpg?twic=v1/dpr=2/focus=0x0/cover=740x416"/>
       <% end %>
+       <% if spaceship.destination == "Moon" %>
         <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/7c/e1/55/7ce1557b4ec822182b4c23a9a14bf0a1.jpg); background-position: center;">
+       <% elsif spaceship.destination == "Mars" %>
+        <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdna.artstation.com/p/assets/images/images/003/760/636/large/dumitru-vlx-sand-0000.jpg?1477223322); background-position: center;">
+        <% elsif spaceship.destination == "Space" %>
+        <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.universetoday.com/wp-content/uploads/2014/08/eso1425a.jpg); background-position: center;">
+         <% elsif spaceship.destination == "Pluto" %>
+        <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.fineartamerica.com/images-medium-large-5/2-landscape-of-pluto-take-27-ltd.jpg); background-position: center;">
+        <% else  %>
+        <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/7c/e1/55/7ce1557b4ec822182b4c23a9a14bf0a1.jpg); background-position: center;">
+      <% end %>
           <div class="card-trip-infos">
 
               <h1><%= link_to spaceship.name, spaceship_path(spaceship), style:'color:#FFFFFF; text-decoration:none;', class:'title;' %></h1>
