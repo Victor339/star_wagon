@@ -10,6 +10,7 @@
     "bootstrap": "^4.5.2",
     "flatpickr": "^4.6.6",
     "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4",
     "popper.js": "^1.16.1",
     "sweetalert": "^2.1.2",
     "turbolinks": "^5.2.0"
