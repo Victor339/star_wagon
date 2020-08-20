@@ -4,9 +4,8 @@ class SpaceshipsController < ApplicationController
   def index
     #@spaceships = Spaceship.all
     @spaceships = policy_scope(Spaceship).order(created_at: :desc)
-
     if params[:query].present?
-      @mspaceships = Spaceship.where(destination: params[:query])
+      @spaceships = Spaceship.where("destination ILIKE ?", "%#{params[:query]}%")
     else
       @spaceships = Spaceship.all
     end

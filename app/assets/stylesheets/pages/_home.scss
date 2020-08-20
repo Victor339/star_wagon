@@ -158,8 +158,10 @@
 
 .container {
   margin: auto;
+}
 
   .search {
+    content: "";
     opacity: 0.65;
     position: absolute;
     margin: auto;
@@ -169,45 +171,94 @@
     left: 0;
     width: 100px;
     height: 100px;
-   background-color: #e9bcb7;
-  background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);;
+    background-color: #e9bcb7;
+    background-image: -webkit-linear-gradient(bottom right, #e9bcb7 0%, #29524a 74%);
+    background-image: -o-linear-gradient(bottom right, #e9bcb7 0%, #29524a 74%);
+    background-image: linear-gradient(to top left, #e9bcb7 0%, #29524a 74%);;
     border-radius: 50%;
     transition: all 1s;
     z-index: 4;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-    // box-shadow: 0 0 25px 0 crimson;
+    box-shadow: 0 0 25px 0 crimson;
     &:hover {
       cursor: pointer;
     }
-    &::before {
-      content: "";
-      position: absolute;
-      margin: auto;
-      top: 350px;
-      right: 0;
-      bottom: 0;
-      left: 22px;
-      width: 12px;
-      height: 2px;
-      background: white;
-      transform: rotate(45deg);
-      transition: all .5s;
+     &:focus {
+      width: 300px;
+      cursor: text;
     }
-    &::after {
-      content: "";
-      position: absolute;
-      margin: auto;
-      top: -5px;
-      right: 0;
-      bottom: 0;
-      left: -5px;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      border: 2px solid white;
-      transition: all .5s;
+    &:focus ~ .search {
+      right: -250px;
+      background: #151515;
+      z-index: 6;
+      &::before {
+        top: 0;
+        left: 0;
+        width: 25px;
+      }
+      &::after {
+        // top: 0;
+        // left: 0;
+        // width: 25px;
+        // height: 2px;
+        // border: none;
+        // background: white;
+        // border-radius: 0%;
+        // transform: rotate(-45deg);
+        //   font-family: 'Inconsolata', monospace;
+        position: absolute;
+        margin: auto;
+        top: 200px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        border: none;
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background: crimson;
+        color: white;
+        text-shadow: 0 0 10px crimson;
+        padding: 0 80px 0 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 25px 0 crimson;
+        // box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
+        transition: all 1s;
+        opacity: 0;
+        z-index: 5;
+        font-weight: bolder;
+        letter-spacing: 0.1em;
+      }
     }
   }
+
+    // &::before {
+    //   position: absolute;
+    //   margin: auto;
+    //   top: 350px;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 22px;
+    //   width: 12px;
+    //   height: 2px;
+    //   background: white;
+    //   transform: rotate(45deg);
+    //   transition: all .5s;
+    // }
+    // &::after {
+    //   position: absolute;
+    //   margin: auto;
+    //   top: -5px;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: -5px;
+    //   width: 25px;
+    //   height: 25px;
+    //   border-radius: 50%;
+    //   border: 2px solid white;
+    //   // transition: all .5s;
+    // }
 
 .input-red-search-bar {
     font-family: 'Inconsolata', monospace;
@@ -221,7 +272,7 @@
     height: 50px;
     outline: none;
     border: none;
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background: crimson;
     color: white;
     text-shadow: 0 0 10px crimson;
@@ -229,7 +280,7 @@
     border-radius: 30px;
     box-shadow: 0 0 25px 0 crimson,
                 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    // box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
     transition: all 1s;
     opacity: 0;
     z-index: 5;
@@ -253,14 +304,39 @@
         width: 25px;
       }
       &::after {
-        top: 0;
+        // top: 0;
+        // left: 0;
+        // width: 25px;
+        // height: 2px;
+        // border: none;
+        // background: white;
+        // border-radius: 0%;
+        // transform: rotate(-45deg);
+        //   font-family: 'Inconsolata', monospace;
+        position: absolute;
+        margin: auto;
+        top: 200px;
+        right: 0;
+        bottom: 0;
         left: 0;
-        width: 25px;
-        height: 2px;
+        width: 50px;
+        height: 50px;
+        outline: none;
         border: none;
-        background: white;
-        border-radius: 0%;
-        transform: rotate(-45deg);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background: crimson;
+        color: white;
+        text-shadow: 0 0 10px crimson;
+        padding: 0 80px 0 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 25px 0 crimson,
+                    0 20px 25px 0 rgba(0, 0, 0, 0.2);
+        // box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
+        transition: all 1s;
+        opacity: 0;
+        z-index: 5;
+        font-weight: bolder;
+        letter-spacing: 0.1em;
       }
     }
     &::placeholder {
@@ -269,7 +345,7 @@
       font-weight: bolder;
     }
   }
-}
+
 
 .btn.btn-flat {
   z-index: 6;

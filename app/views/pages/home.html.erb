@@ -9,17 +9,14 @@
       <% if user_signed_in? %>
         <p class="text-center">Hello <%= current_user.name %></p>
         <% end  %>
-        <input class="input-red-search-bar" type="text" placeholder="Search...">
-        <div class="search" id="search-bar-key"></div>
+        <button class="search"></button>
           <%= form_tag spaceships_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
-              class: "form-control",
-              placeholder: "Enter a destination to find a spaceship"
+            class: "input-red-search-bar", id:"search"
             %>
-            <%= submit_tag "Search" %>
+            <%= submit_tag "Search", class: "btn btn-primary", style: "display: none;"%>
           <% end %>
-
       </div>
 
     </div>
