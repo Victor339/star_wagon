@@ -34,6 +34,10 @@ gem 'simple_form'
 gem 'devise'
 gem 'pundit'
 
+# Adding popper.js gem file
+
+gem 'popper_js', '~> 1.14.5'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
