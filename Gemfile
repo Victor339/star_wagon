@@ -38,6 +38,7 @@ gem 'pundit'
 
 gem 'cloudinary', '~> 1.12.0'
 
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 
