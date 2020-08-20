@@ -5,6 +5,7 @@ const toggleShowCard = () => {
 
   const planets = document.querySelectorAll(".circle-img");
 
+
   planets.forEach((planet) => {
     planet.addEventListener('click', (event) => {
       if (event.target == planet) {
