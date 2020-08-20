@@ -16,6 +16,7 @@ const calculateBookingPrice = () => {
     priceHtml.innerText = total
 
 })
+
 // innerText ?
 // on recupère une string qu'on veut convertir en date
 // difference antre date d'arrivée et date de depart * le prix par jour

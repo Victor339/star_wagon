@@ -4,26 +4,27 @@
   <div class="container">
   <h1><%= "All our spaceships available" %></h1>
 
-  <tbody>
+  <div class="cards">
     <% @spaceships.each do|spaceship| %>
+    <div>
       <% if spaceship.photo.attached? %>
       <%= cl_image_tag spaceship.photo.key, height: 200, width: 200, crop: :fill, class:'circle-img', style:'z-index:100;' %>
       <% else %>
       <img class="circle-img" style="z-index:100;" src="https://images.laprovence.com/media/afp/2019-07/2019-07-17/1063873287aed43c95d4387a69640c68c6763aaf.jpg?twic=v1/dpr=2/focus=0x0/cover=740x416"/>
       <% end %>
-        <div class="card-trip" id="content" style="background-image: url(https://mcdn.wallpapersafari.com/medium/1/38/Pwc2Qz.jpg);">
+        <div class="card-trip" id="content" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/7c/e1/55/7ce1557b4ec822182b4c23a9a14bf0a1.jpg); background-position: center;">
           <div class="card-trip-infos">
-             <tr>
-              <h3 class="text-center"><%= link_to spaceship.name, spaceship_path(spaceship), style:'color:#FFFFFF; text-decoration:none;' %></h3>
-              <tr class="text-center"> <%= spaceship.destination %> </tr>
-              <tr class="text-center"><%= "Pays de départ: #{spaceship.country}"  %></tr>
-              <li class="list-group-item list-group-item-dark text-right" id ="price-per-day"><%= spaceship.price %> <strong>$</strong></li>
+
+              <h1><%= link_to spaceship.name, spaceship_path(spaceship), style:'color:#FFFFFF; text-decoration:none;', class:'title;' %></h1>
+              <h2 id="destination">Destination: <strong> <%= spaceship.destination  %></strong></h2>
+              <br>
+              <tr class="text-center"><%= spaceship.description %></tr>
+              <br>
+              <tr class="text-center">Country of departure: <strong><%= spaceship.country %></strong> </tr>
+              <p class="text-right align-bottom" id ="price-per-day"><%= number_to_currency(spaceship.price, :unit => "€") %> </p>
           </div>
         </div>
+       </div>
     <% end %>
-
-
-  </tbody>
-
   </div>
 </div>
