@@ -21,6 +21,13 @@ apollo = Spaceship.create!(name: "ApolloXX", year_of_creation: 1960, country: "E
 space_x = Spaceship.create!(name: "StarShip", year_of_creation: 2015, country:"Etats-Unis", price: "100000000$", description: "Un aller simple pour Mars ?! Venez vous lancer sur la base de Space X en Floride avec Elon Musk", destination: "Space", user_id: walid.id)
 soyouz = Spaceship.create!(name: "Soyouz", year_of_creation: 1958, country: "Russie", price: "1000$", description: "Départ à Baibounour au Kazakhstan. Venez faire votre ApéroBlindTest dans l'espace", destination: "Pluto", user_id: nicolas.id)
 
+#booking1 = Booking.create!(user_id: victor.id, spaceship_id: ariane.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
+#booking2 = Booking.create!(user_id: walid.id, spaceship_id: apollo.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
+#booking3 = Booking.create!(user_id: segolene.id, spaceship_id: space_x.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
+#booking4 = Booking.create!(user_id: nicolas.id, spaceship_id: soyouz.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
+
+
+
 file = URI.open("https://i.pinimg.com/originals/84/11/96/841196065b7e30672e76a9de7ce71f82.jpg")
 apollo.photo.attach(io: file, filename: 'apollo.jpg', content_type: 'image/jpg')
 

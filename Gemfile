@@ -36,7 +36,7 @@ gem 'pundit'
 
 # Adding cloudinary gem
 
-gem 'cloudinary', '~> 1.12.0'
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 gem 'dotenv-rails', groups: [:development, :test]
