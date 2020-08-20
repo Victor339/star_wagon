@@ -38,6 +38,9 @@ gem 'pundit'
 
 gem 'cloudinary', '~> 1.12.0'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
+
 # Adding popper.js gem file
 
 gem 'popper_js', '~> 1.14.5'
