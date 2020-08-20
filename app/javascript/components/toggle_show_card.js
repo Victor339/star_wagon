@@ -1,5 +1,4 @@
 const toggleShowCard = () => {
-  console.log("test")
 
   const contents = document.querySelectorAll("#content");
   console.log(contents)
@@ -12,6 +11,12 @@ const toggleShowCard = () => {
         const content = planet.nextElementSibling
         content.classList.toggle("show");
       }
+
+  // createPopper(contents, planets, {
+  //   placement: 'bottom',
+  // });
+
+
       // else {
       //   console.log("here")
       //   contents.forEach((content) => {
