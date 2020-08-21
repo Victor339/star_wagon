@@ -26,9 +26,9 @@ class BookingsController < ApplicationController
    	   #else
       	#@booking.total_price = 0
        #end
-      sleep 8
+      sleep 6
     if @booking.save
-       redirect_to booking_path(@booking)
+       redirect_to bookings_path
     else
       	render "spaceships/show"
     	end
@@ -42,9 +42,12 @@ class BookingsController < ApplicationController
   end
 
     def destroy
+
       authorize @booking
       @booking.destroy
       redirect_to bookings_path
+
+
     end
 
 private

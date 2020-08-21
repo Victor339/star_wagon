@@ -14,7 +14,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
-  position:fixed;
+  position:absolute;
   top:0;
   width:100%;
   height:56px;
@@ -26,6 +26,14 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 100px;
+  width: 70px;
+  border-radius: 12%;
+  margin-top: 18px;
   // background-color: transparent;
+}
+
+.avatar {
+  width: 56px;
+  border-radius: 50%;
+  margin-top: 18px;
 }
