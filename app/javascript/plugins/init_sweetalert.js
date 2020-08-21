@@ -7,10 +7,10 @@ const initSweetalert = (selector, options = {}, callback = () => {}) => {
       const name = document.getElementById('spaceship-name').innerText
   const price = document.getElementById('price').innerText
   const option = {
-  title: "Thank you!",
+  title: "Be Ready 😄",
   text: `Your booking has been successfuly saved. You will fly with ${name}. The total price for your booking is ${price}€`,
   icon: "success",
-  timer: 6000,
+  timer: 5000,
 }
       swal(option).then(callback); // <-- add the `.then(callback)`
     });
