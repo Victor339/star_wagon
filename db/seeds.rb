@@ -16,10 +16,12 @@ walid = User.create!(name:"Walid", age:"30", email: "walid@zoom.com", password: 
 segolene = User.create!(name:"Segolene", age:"36", email: "segolene@greenpeace.com", password: "wasteless", admin: false)
 nicolas = User.create!(name:"Nicolas", age:"32", email: "nicolas@parcdesprinces.fr", password: "Parisenfinaledimanche", admin: false)
 
-ariane = Spaceship.create!(name: "Ariane 5", year_of_creation: 1970, country: "French Guiana", price: "100000$", description: "An unique experience leaded by the CNES. Departure from the Kourou base in French Guiana", destination: "Mars", user_id: victor.id)
-apollo = Spaceship.create!(name: "ApolloXX", year_of_creation: 1960, country: "United-States", price: "10000000$", description: "Ready for a trip to the Moon? Departure from Cape Canaveral in Florida under the monitoring of the NASA", destination: "Moon", user_id: segolene.id)
-space_x = Spaceship.create!(name: "StarShip", year_of_creation: 2015, country:"United-States", price: "100000000$", description: "A one-way travel for Mars?! Enjoy your launch at the SpaceX base in Florida with Elon Musk.", destination: "Space", user_id: walid.id)
-soyouz = Spaceship.create!(name: "Soyouz", year_of_creation: 1958, country: "Kazakhstan", price: "10000$", description: "Departure from Baibounour in Kazakhstan. Come play a party of AperoBlindTest in space!", destination: "Pluto", user_id: nicolas.id)
+ariane = Spaceship.create!(name: "Ariane 5", year_of_creation: 1970, country: "French Guiana", price: "100000", description: "A unique experience leaded by the CNES. Departure from the Kourou base in French Guiana.", destination: "Mars", user_id: victor.id)
+apollo = Spaceship.create!(name: "ApolloXX", year_of_creation: 1960, country: "United-States", price: "10000000", description: "Ready for a trip to the Moon? Departure from Cape Canaveral in Florida under the monitoring of the NASA.", destination: "Moon", user_id: segolene.id)
+space_x = Spaceship.create!(name: "StarShip", year_of_creation: 2015, country:"United-States", price: "100000000", description: "A one-way trip for Mars?! Enjoy your launch at the SpaceX base in Florida with Elon Musk.", destination: "Space", user_id: walid.id)
+soyouz = Spaceship.create!(name: "Soyouz", year_of_creation: 1958, country: "Kazakhstan", price: "10000", description: "Departure from Baibounour in Kazakhstan. Come play a party of AperoBlindTest in space!", destination: "Pluto", user_id: nicolas.id)
+millenium = Spaceship.create!(name: "Millenium", year_of_creation: 1977, country: "Tatooine", price: "1500000", description: "Meet the legendary crew from the Millenium and reach Mars in the fastest way possible! Departure from Hollywood.", destination: "Mars", user_id: nicolas.id)
+spoutnik = Spaceship.create!(name: "Spoutnik", year_of_creation: 1957, country: "Russia", price: "10000", description: "Ride in one of the great wonder of our world and discover the martian environnement. Departure from Moscou", destination: "Mars", user_id: nicolas.id)
 
 #booking1 = Booking.create!(user_id: victor.id, spaceship_id: ariane.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
 #booking2 = Booking.create!(user_id: walid.id, spaceship_id: apollo.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
@@ -40,5 +42,12 @@ space_x.photo.attach(io: file3, filename: 'space_x.jpg', content_type: 'image/jp
 file4 =  URI.open("https://www.nasaspaceflight.com/wp-content/uploads/2017/09/Z3GGG.jpg")
 soyouz.photo.attach(io: file4, filename: 'soyouz.jpg', content_type: 'image/jpg')
 
+file5 =  URI.open("https://www.nme.com/wp-content/uploads/2016/11/star_wars_millenium_falcon_movie.jpg")
+millenium.photo.attach(io: file5, filename: 'millenium.jpg', content_type: 'image/jpg')
 
+file6 =  URI.open("https://ovnis-doit-on-y-croire.e-monsite.com/medias/images/698c8e8591cae93eb7b55fcd69951d-h498-w598-m2.jpg")
+spoutnik.photo.attach(io: file6, filename: 'spoutnik.jpg', content_type: 'image/jpg')
+
+# https://www.nme.com/wp-content/uploads/2016/11/star_wars_millenium_falcon_movie.jpg
+# https://medias.pourlascience.fr/api/v1/images/view/5a82a4038fe56f4a4f5e2ee3/wide_1300/image.jpg
 
