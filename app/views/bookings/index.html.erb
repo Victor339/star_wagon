@@ -15,16 +15,16 @@
 					<li class="copy"> Spaceship name <%= booking.spaceship.name %> </li>
 					<li class="copy"> Booking start date : <%= booking.departure_date %></li>
 					<li class="copy"> Booking end date : <%= booking.arrival_date %></li>
-					<li class="copy"> Booking total : $<%= booking.total_price %></li>
+					<li class="copy"> Booking total :  <%= number_to_currency(booking.total_price, :unit => "€") %></li>
 				</ol>
 
 			        <div class="row justify-content-around mt-2">
 			        	<div class="nounderline">
-			        	 <%= link_to "Edit", edit_booking_path(booking.id), class: "btn-booking" %> 
+			        	 <%= link_to "Edit", edit_booking_path(booking.id), class: "btn-booking" %>
 						</div>
 			        	 <%= link_to "X", booking, data: {confirm: "Are you sure?"}, method: :delete, remote: true, class: "remove-image", style:"display: inline;" %>
 			        </div>
-			   
+
 			</div>
 			<% end %>
 		</div>
