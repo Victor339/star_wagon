@@ -18,13 +18,13 @@
 }
 
 .form-container {
+  padding: 20px;
+  align-self: flex-start;
+  margin-right: 35px;
+  color: white;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  border: 10px, black;
-  padding: 20px;
-  margin-right: 35px;
-  color: white;
 }
 
 
@@ -188,7 +188,7 @@ $bp-lg: 800px;
   border: none;
 
   &:hover {
-    background-color: lighten(black, 5%);
+    background-color: lighten(white, 5%);
   }
 
   &:focus {

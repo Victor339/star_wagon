@@ -10,7 +10,7 @@ const initSweetalert = (selector, options = {}, callback = () => {}) => {
   title: "Thank you!",
   text: `Your booking has been successfuly saved. You will fly with ${name}. The total price for your booking is ${price}€`,
   icon: "success",
-  timer: 8000,
+  timer: 6000,
 }
       swal(option).then(callback); // <-- add the `.then(callback)`
     });
