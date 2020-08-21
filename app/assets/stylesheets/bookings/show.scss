@@ -19,9 +19,9 @@ h2 {
 }
 
 #thank {
-	position: absolute;
-	top: 200px;
-	left: 200px;
+  position: absolute;
+  top: 200px;
+  left: 200px;
 }
 
 .btn-booking {
@@ -54,12 +54,12 @@ h2 {
 li {
   transform: translate(10px, 75%);
   vertical-align: middle;
-   color: white;
-   font: bold 24px/45px Helvetica, Sans-Serif;
-   letter-spacing: -1px;
-   // background: rgb(0, 0, 0); /* fallback color */
-   // background: rgba(0, 0, 0, 0.7);
-   padding: 10px;
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
 }
 
 
@@ -111,11 +111,7 @@ li {
     //transform: translateY(-50%);
     //transition: transform calc(var(--d) * 2) var(--e);
   }
-    &:hover {
-    background-color: none;
-    linear-gradient: none;
-  }
-  
+
 
 
 .btn-edit-booking {
@@ -174,3 +170,4 @@ right: 2px;
 .row {
   text-decoration: none;
 }
+
