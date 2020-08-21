@@ -1,9 +1,4 @@
 
-<% @bookings.each do |booking| %>
-<%= booking.total_price %>
-<% end %>
-
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/26/1c/87/261c873caad55938277c6491f6daec90.jpg);">
 
 <section style="margin-top: 60px;">
@@ -14,7 +9,7 @@
 			<div class="row">
 				<% @bookings_user.each do |booking| %>
 
-			<div class="card p-3" id="card-booking">
+			<div class="card" id="card-booking">
 				<ol class="copy" data-booking-id="<%= booking.id %>" style="list-style: none;">
 					<li class="copy"> Name: <%= booking.user.name %> <%booking.user.name %></li>
 					<li class="copy"> Spaceship name <%= booking.spaceship.name %> </li>
@@ -24,8 +19,9 @@
 				</ol>
 
 			        <div class="row justify-content-around mt-2">
-			        	 <%= link_to "Edit", edit_booking_path(booking.id), class: "btn-booking btn-primary mb-1" %> 
-
+			        	<div class="nounderline">
+			        	 <%= link_to "Edit", edit_booking_path(booking.id), class: "btn-booking" %> 
+						</div>
 			        	 <%= link_to "X", booking, data: {confirm: "Are you sure?"}, method: :delete, remote: true, class: "remove-image", style:"display: inline;" %>
 			        </div>
 			   
@@ -39,4 +35,3 @@
 </div>
 </section>
 </div>
-			
