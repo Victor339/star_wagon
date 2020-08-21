@@ -1,5 +1,3 @@
-// footer
-
 .footer {
   position: absolute;
   // top: -50px;
@@ -14,6 +12,7 @@
   padding: 0px 50px;
   color: white;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -31,5 +30,5 @@
 
 .full-height {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
