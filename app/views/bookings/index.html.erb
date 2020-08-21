@@ -10,7 +10,7 @@
 				<% @bookings_user.each do |booking| %>
 
 			<div class="card" id="card-booking">
-				<ol class="copy" data-booking-id="<%= booking.id %>" style="list-style: none;">
+				<ol data-booking-id="<%= booking.id %>" style="list-style: none;">
 					<li class="copy"> Name: <%= booking.user.name %> <%booking.user.name %></li>
 					<li class="copy"> Spaceship name <%= booking.spaceship.name %> </li>
 					<li class="copy"> Booking start date : <%= booking.departure_date %></li>
