@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   def index
    @bookings = policy_scope(Booking).order(created_at: :desc)
+   @bookings_user = current_user.bookings
   end
 
   def show
@@ -25,9 +26,9 @@ class BookingsController < ApplicationController
    	   #else
       	#@booking.total_price = 0
        #end
-      sleep 8
+      sleep 6
     if @booking.save
-       redirect_to booking_path(@booking)
+       redirect_to bookings_path
     else
       	render "spaceships/show"
     	end
