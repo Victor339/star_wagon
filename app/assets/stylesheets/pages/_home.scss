@@ -65,31 +65,6 @@
   transition: background 0.3s ease;
 }
 
-// footer
-.footer {
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
@@ -107,7 +82,7 @@
 
 
 .stars {
- 
+
 }
 
 .stars > div {
@@ -122,7 +97,7 @@
 .stars .stars-back {
   top: -50%;
   opacity: 0.5;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
     radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
@@ -133,7 +108,7 @@
 }
 
 .stars .stars-middle {
-    background-image: 
+    background-image:
     radial-gradient(3px 3px at 50px 160px, #ddd, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
