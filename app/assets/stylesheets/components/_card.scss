@@ -33,10 +33,16 @@
   border:3px solid whitesmoke;
   margin-top: 4%;
   margin-left: 10%;
-  background: linear-gradient(rgba(100,100,100,0.3), rgba(100,100,100,0.3));
+  background: linear-gradient(rgba(100,100,100,1), rgba(100,100,100,1));
+  opacity: 0.8;
   // display:flex;
   // justify-content: center;
   // align-items: center;
+}
+
+.circle-img:hover {
+ opacity: 1;
+ cursor: pointer;
 }
 
 .card-trip tr {
@@ -99,3 +105,14 @@ p {
 .card-trip h1 {
   text-align: center;
 }
+
+a.title {
+  color:#FFFFFF;
+}
+
+a.title:hover {
+  text-decoration: none;
+  color: #5c8a36;
+}
+
+

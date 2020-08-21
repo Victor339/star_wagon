@@ -2,7 +2,7 @@
 <!--   style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1543722530-d2c3201371e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80);"
  -->
   <div class="container">
-  <h1><%= "All our spaceships available" %></h1>
+  <h1><%= "Choose the spaceship you like" %></h1>
 
   <div class="cards">
     <% @spaceships.each do|spaceship| %>
@@ -25,7 +25,12 @@
       <% end %>
           <div class="card-trip-infos">
 
-              <h1><%= link_to spaceship.name, spaceship_path(spaceship), style:'color:#FFFFFF; text-decoration:none;', class:'title;' %></h1>
+              <h1><%= link_to spaceship.name, spaceship_path(spaceship), style:'color:#AEAEAE; text-decoration:none;', class:'home_links' %></h1>
+               <style type="text/css">
+                  .home_links:hover{
+                  color:#FFFFFF!important;
+                                    }
+              </style>
               <h2 id="destination">Destination: <strong> <%= spaceship.destination  %></strong></h2>
               <br>
               <tr class="text-center"><%= spaceship.description %></tr>
