@@ -16,10 +16,10 @@ walid = User.create!(name:"Walid", age:"30", email: "walid@zoom.com", password: 
 segolene = User.create!(name:"Segolene", age:"36", email: "segolene@greenpeace.com", password: "wasteless", admin: false)
 nicolas = User.create!(name:"Nicolas", age:"32", email: "nicolas@parcdesprinces.fr", password: "Parisenfinaledimanche", admin: false)
 
-ariane = Spaceship.create!(name: "Ariane 5", year_of_creation: 1970, country: "Guyane Française", price: "100000$", description: "Une expérience unique dirigée par le CNES. Départ de la base de Kourou en Guyane Française", destination: "Mars", user_id: victor.id)
-apollo = Spaceship.create!(name: "ApolloXX", year_of_creation: 1960, country: "Etats-Unis", price: "10000000$", description: "Prêt au départ pour la Lune ? Départ de Cap Canaveral en Floride, sous la supervision de la NASA", destination: "Moon", user_id: segolene.id)
-space_x = Spaceship.create!(name: "StarShip", year_of_creation: 2015, country:"Etats-Unis", price: "100000000$", description: "Un aller simple pour Mars ?! Venez vous lancer sur la base de Space X en Floride avec Elon Musk", destination: "Space", user_id: walid.id)
-soyouz = Spaceship.create!(name: "Soyouz", year_of_creation: 1958, country: "Russie", price: "1000$", description: "Départ à Baibounour au Kazakhstan. Venez faire votre ApéroBlindTest dans l'espace", destination: "Pluto", user_id: nicolas.id)
+ariane = Spaceship.create!(name: "Ariane 5", year_of_creation: 1970, country: "French Guiana", price: "100000$", description: "An unique experience leaded by the CNES. Departure from the Kourou base in French Guiana", destination: "Mars", user_id: victor.id)
+apollo = Spaceship.create!(name: "ApolloXX", year_of_creation: 1960, country: "United-States", price: "10000000$", description: "Ready for a trip to the Moon? Departure from Cape Canaveral in Florida under the monitoring of the NASA", destination: "Moon", user_id: segolene.id)
+space_x = Spaceship.create!(name: "StarShip", year_of_creation: 2015, country:"United-States", price: "100000000$", description: "A one-way travel for Mars?! Enjoy your launch at the SpaceX base in Florida with Elon Musk.", destination: "Space", user_id: walid.id)
+soyouz = Spaceship.create!(name: "Soyouz", year_of_creation: 1958, country: "Kazakhstan", price: "10000$", description: "Departure from Baibounour in Kazakhstan. Come play a party of AperoBlindTest in space!", destination: "Pluto", user_id: nicolas.id)
 
 #booking1 = Booking.create!(user_id: victor.id, spaceship_id: ariane.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
 #booking2 = Booking.create!(user_id: walid.id, spaceship_id: apollo.id, departure_date: "01/03/2020", arrival_date: "10/03/2020", total_price: "100000000$")
