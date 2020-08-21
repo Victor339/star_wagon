@@ -40,8 +40,7 @@ import { calculateBookingPrice } from '../components/calculate_booking_price'
 import { toggleShowCard } from '../components/toggle_show_card';
 import { datepicker } from '../plugins/flatpickr';
 import { initSweetalert } from '../plugins/init_sweetalert';
-
-
+import { refreshPage } from '../components/refresh_page';
 document.addEventListener('turbolinks:load', () => {
   toggleShowCard();
   // Call your functions here, e.g:
