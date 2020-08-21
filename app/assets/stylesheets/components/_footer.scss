@@ -3,15 +3,16 @@
 .footer {
   position: absolute;
   // top: -50px;
-  bottom: 50px;
+  bottom: 0;
   // transform: translateY(-100%);
   opacity: 1; // Leave this as 1
-  background-color: rgba(1,1,1,0);
+  background-color: rgba(230, 230, 230, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  padding: 0px 50px;
+  width: 100vw;
+  padding: 2.5rem 0rem;
   color: white;
 }
 .footer-links {
@@ -31,5 +32,5 @@
 
 .full-height {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
