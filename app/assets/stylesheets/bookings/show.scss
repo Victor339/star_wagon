@@ -47,6 +47,7 @@ h2 {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  text-decoration: none !important
 }
 
 
@@ -62,7 +63,7 @@ li {
 }
 
 
-#card-booking {
+.card{
   margin-bottom: 30px;
     height: 15vh;
   position: relative;
@@ -110,6 +111,11 @@ li {
     //transform: translateY(-50%);
     //transition: transform calc(var(--d) * 2) var(--e);
   }
+    &:hover {
+    background-color: none;
+    linear-gradient: none;
+  }
+  
 
 
 .btn-edit-booking {
@@ -165,3 +171,6 @@ right: 2px;
 }
 
 
+.row {
+  text-decoration: none;
+}

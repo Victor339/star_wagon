@@ -9,7 +9,7 @@
 			<div class="row">
 				<% @bookings_user.each do |booking| %>
 
-			<div class="card p-3" id="card-booking">
+			<div class="card" id="card-booking">
 				<ol class="copy" data-booking-id="<%= booking.id %>" style="list-style: none;">
 					<li class="copy"> Name: <%= booking.user.name %> <%booking.user.name %></li>
 					<li class="copy"> Spaceship name <%= booking.spaceship.name %> </li>
@@ -19,8 +19,9 @@
 				</ol>
 
 			        <div class="row justify-content-around mt-2">
-			        	 <%= link_to "Edit", edit_booking_path(booking.id), class: "btn-booking btn-primary mb-1" %> 
-
+			        	<div class="nounderline">
+			        	 <%= link_to "Edit", edit_booking_path(booking.id), class: "btn-booking" %> 
+						</div>
 			        	 <%= link_to "X", booking, data: {confirm: "Are you sure?"}, method: :delete, remote: true, class: "remove-image", style:"display: inline;" %>
 			        </div>
 			   
@@ -34,7 +35,7 @@
 </div>
 </section>
 </div>
-			<!-- 
+		<!-- 
 
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -44,6 +45,8 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
  
+
+
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="https://static.latribune.fr/1351074/spacex-crew-dragon-nasa-elon-musk.jpg" alt="First slide"> 
@@ -78,4 +81,4 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div> -->
+</div> 
