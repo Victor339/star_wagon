@@ -42,9 +42,12 @@ class BookingsController < ApplicationController
   end
 
     def destroy
-      set_booking
+
+      authorize @booking
       @booking.destroy
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
+
+
     end
 
 private
