@@ -11,12 +11,12 @@
 
 			<div class="card" id="card-booking">
 				<ol data-booking-id="<%= booking.id %>" style="list-style: none;">
-					<li class="copy"> Name: <%= booking.user.name %> <%booking.user.name %></li>
-					<li class="copy"> Spaceship : <%= booking.spaceship.name %> </li>
-					<li class="copy"> Destination : <%= booking.spaceship.destination %> </li>
-					<li class="copy"> Booking start date : <%= booking.departure_date %></li>
-					<li class="copy"> Booking end date : <%= booking.arrival_date %></li>
-					<li class="copy"> Booking total :  <%= number_to_currency(booking.total_price, :unit => "€") %></li>
+					<li class="copy-index"> Name: <%= booking.user.name %> <%booking.user.name %></li>
+					<li class="copy-index"> Spaceship : <%= booking.spaceship.name %> </li>
+					<li class="copy-index"> Destination : <%= booking.spaceship.destination %> </li>
+					<li class="copy-index"> Booking start date : <%= booking.departure_date %></li>
+					<li class="copy-index"> Booking end date : <%= booking.arrival_date %></li>
+					<li class="copy-index"> Booking total :  <%= number_to_currency(booking.total_price, :unit => "€") %></li>
 				</ol>
 
 			        <div class="row justify-content-around mt-2">
